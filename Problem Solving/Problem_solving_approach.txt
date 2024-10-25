@@ -162,6 +162,37 @@ function vowels(str){
 
 str = 'did'
 
+-------------------------------------------------------------------------------
+Excersize: Write a function that prints the numbers from 1 to n. But for multiples of 3 printe "Fizz 
+intead of the number and for multiples of 5 print "buzz". For numbers that are multiples of both three
+and five print FizzBuzz
+
+IMY: if a number is divsible by 3 print fizz. Divisible by 5 print buzz. divisble by both print FizzBuzz
+ else print the number
+
+example fizzBuzz(5) -> 1,2,fizz,4,buzz
+
+will the input alwasy be an integer? ---> yes 
+what if there is no input? 
+
+const fizzBuzz = (num) =>{
+    //loop up to param num
+    for(let i = 1; i <= num;i++){
+        if(num % 3 && num % 5 === 0){
+            console.log('FizzBuzz')
+        }else if(num % 3 === 0){
+            conosle.log('Fizz')
+        }else if(num % 5 === 0){
+            console.log('Buzz')
+        }else{
+            console.log(num)
+        }
+    }
+    //if divisbile by 3 & 5 log fizzbuzz
+    //if num divisible by 3 log fizz
+    //if num divisble by only 5 log buzz
+    //else just log the number
+}
 
 
 
