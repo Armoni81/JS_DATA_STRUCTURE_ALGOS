@@ -1,0 +1,62 @@
+What is Big O 
+Simply: Lets count the number of simple Operations the computer has to perform. 
+
+Counting Operations 
+
+function addUpto(n) => {
+    return n * ( n + 1 ) / 2
+}
+
+Total Operations: 3 
+
+Operations: Multiply , Add and Divide 
+
+function addUpTo(n) => {
+    cosnt total = 0
+
+    for(let i = 0; i <= n; i++){
+        total += i
+    }
+    return total
+}
+
+        Total Operations: 27 Operations
+
+        Operations: 2 from assigning total to 0 and for assigning i to 0
+        The rest depends on what n is. For example if n = 5 line 18 would account for 10 operations.
+        line 17 would account for 15 operations as well with (i <= n) accountig for 5 & (i++) because you are adding (i) and 
+        reassigning (i) accounting for 10 operations
+
+BIG O Definiton 
+
+f(n) could be linear (fn(n) = n)
+f(n) could be quadratic (fn(n) = n2)
+f(n) could be constant (fn(n) = 1)
+f(n) could be somethig entirely different 
+
+
+Big O Short Hands 
+    - Arithmetic Operations are constant
+    - Var assignment is constant
+    - Accessing elements in an array (by index) or object(by key) is constant
+    - In a loop, the complexity is the kength of the loop times the complexity of whatever happens inside of the loop
+
+
+Space Complexity
+
+Rules of Thumb 
+    - Most primitives(bools, numbers, undefined, null) are constant space
+    - Strings require O(n) space (where n is the string length)
+    - Refrence types are generally O(n), where n is the length (for arrays) or the numbers of keys(objects)
+
+
+Logarithms
+
+What is Log ? 
+    - The inverse of exponentions 
+
+    Example log 2^8 = 3
+
+    This problem simply states to what power of 2 will give me 8? 
+    2 * 2 * 2 = 8 
+    so the answer is 3

@@ -1,0 +1,16 @@
+Arrays (Ordered List)
+
+When to use Arrays ? 
+    - When you need order
+
+Big O of Arrays 
+    Searching - O(n)
+    Accessing - O(1)
+    Insertion - depends.. Inserting at the beginning has a Big O of O(n)
+    Removal - depends... Removing at the beginning has a Big O of O(n)
+
+
+Array methods Big O 
+O(1) - .push() -Becasue you are just adding it to the end of the array (indexes stay the same)
+O(1) - .pop()  - Becasue you are just removing from the end of the array (indexes stay the same)
+O(n) - .forEach| .map | .reduce | .filter | .concat | .unshift | .splice

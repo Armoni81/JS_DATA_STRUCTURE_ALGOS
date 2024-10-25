@@ -1,0 +1,167 @@
+What is an Algorithm? 
+    - A process or set of steps to accomplish a certain task
+
+
+Step 1: Understand the problem 
+
+1. Can I restate the problem in my own words ? 
+2. What are the input that go into the problem ? 
+3. What are the outputs that should come from my soultion ? 
+4. Can the outputs be determinded from the inputs ? 
+5. How should I label the importnatn peices of data that are a part of the problem ? 
+
+
+Step 2: Explore Examples 
+
+1. Start with simple examples 
+2. Progress with more complex examples 
+3. explore Examples with Empty Inputs 
+4. Explore with invalid inputs 
+
+
+Interviewer says: Write a function that takes in a string and returns counts of each character in the string 
+
+charCount('aaaa') - Should this return {a:4}  // SImple example
+charCount('Hello Worldh') - should this return {H:1,e:1, l:3, o: 2, W:1, r:1, d:1, h:1} //complex example 
+charCount('') - since there is no input what do we want to return? An empty object? Null? undefined? // No input
+charCount({a:null}) - since this is an invalidinput what do we want to return? // Invalid Input
+
+MORE QUESTIONS TO ASK.
+Are we accounting for spaces? 
+Are we countings numbers also? 
+Are upper and lowercase letters the same ? 
+
+Step 3: Break it down (writing out the steps you will take)
+
+- Doenst have to be sudo code of 100% how to soleve it , just simply layout steps
+
+For example: 
+Interviewer says: "Write a function that takes in a string and returns counts of each character in the string in an object. 
+Make all letters lowercase and only count for AlphaNumeric (Int/Letters)" 
+
+Me : Let me break the problem down in its simplest form. 
+
+function charCount(str) {
+    //make the object that needs to be returned 
+    // loop over each character in the string 
+    // return the object with the expected values 
+}
+
+Me: Now let me break it down in a more complex detailed way
+
+function charCount(str) {
+    //make the object that needs to be returned 
+    // loop over each character in the string
+        // if the character is already accounted for add 1  
+        // if the charcetesd is not accounted for yet set that charcted as the key and the value as 1 
+    // return the object with the expected values 
+}
+
+Step 4: Refactor
+
+Questions to ask after I have a soultion
+
+- Can I imporve the performance of your soultion? 
+- Can you understadn it at a glance? 
+
+
+
+Here Im going to take what I learned and apply it to some simple problems 
+
+IMW = In my words 
+
+Excersize: Write a function that takes a string as input and retunrs the string reversed. 
+
+IMW : take a string and return it reveersed. 
+
+Simple example - reverseStr('Armoni') ---> output 'inomrA'
+Complex example - 
+
+
+// Always will be an input
+// input will always be a valid string 
+
+const reverseStr = (str) => {
+    // var that holds the reveersed string
+    const reverseStr = []
+    // go thorugh each letter in the OG string 
+       //loop through each character starting from the end and add it to the var that holds reversed string
+   for(let i = str.length - 1; i <= 0 ; i--){
+        reverseStr.push(str[i])
+   }
+    //turn reverseStr into a string 
+    return reverStr.join(")
+    // return reveresd string
+}
+
+str = 'Armoni' 
+
+------------------------------------------------------------------------------------------------------
+
+Excersize: Write a function that takes an array of numbers and returns the largest number in the array. 
+
+IMY: return the largest number in the array 
+
+simple example: [1,2,3,4,5] --> 5 (int)
+
+Will the array always only contain ints? --->  Yes 
+Will the array always have values? ---> yes 
+
+function largestNum(arr) {
+    //initalize a var to store the largest value
+        let largestCurrentValue = arr[0]
+    //loop through the array to find the largesst value
+      for(let i = 1 ; i < arr.length; i++){
+            if(largestCurrentValue < arr[i] ){ 
+                    largestCurrentValue = arr[i]
+            } 
+      }
+        // store the largest value as its looping and compare it with the next value
+           
+    
+    // once I have finished looping through each value return the largest value
+    return largestCurrentValue
+}
+arr = [-1,-2,0,-4,5]
+
+----------------------------------------------------------------------------------------
+Excersize: Write a function that takes a string as input and returns the number of vowels (a,e,i,o,u) in the string 
+
+IMY: return the number of vowels in a string
+simple example : vowels('Rick') ---> return 1(int)
+
+Is 'y' included in the vowls list? No only a,e,i,o,u
+will the string alwyas contain letters? Yes it will alwys contain letters 
+if the string is empty shoudl i return zero also?  Yes
+
+function vowels(str){
+    //set an array that contains the vowels
+        const vowels = [a,e,i,o,u]
+    //set a counter to zero 
+        const counter = 0
+    // make each letter lowercase
+        const stringToLowerCase = str.toLowerCase()
+    //loop through each letter in str to compare with vowels array
+        //i will need to stay the same value until j has looped through each vowels
+        for(let i = j = 0; i < str.length; j++){
+            if(str[i] === vowels[j]){
+                counter++
+                j = 0
+                i++
+            }else if(j === vowels.length){
+                i++
+                j=0
+            }
+           
+        }
+        // if a match is found incremnt counter by 1
+    //once the loop is finished return counter
+    return counter
+
+}
+
+str = 'did'
+
+
+
+
