@@ -194,5 +194,36 @@ const fizzBuzz = (num) =>{
     //else just log the number
 }
 
+-------------------------------------------------------------------------------
 
+Excersize: Write a function that takes 2 arguments an array and a number. The function 
+           should split the array into groups of size elements and return them as a 2 dimensional 
+           array
 
+           ** If the array cant be split evenly the final chunks should contain the remaining elements**
+
+simple example chunkArrays([1,2,3,4,5,6], 2) -> [[1,2],[3,4][5,6]]
+simple example chunkArrays([1,2,3,4,5,6,7,8], 5) -> [[1,2,3,4,5],[6,7,8]]
+
+Will the array always hold int? ---> Yes
+What if I get an empty array? --> if the input arr is empty just return an empty arr
+What if the array length is the same as n? -> return the array inside of an array
+
+const splitArr = (arr, n) =>{
+    //if arr.length = 0 return the arr
+    if(arr.length === 0){
+        return []
+    }
+    //if arr.length = n return the arr inside of an arr
+    else if(arr.length === n){
+        return [[arr]]
+    }
+
+    //take the arr and split it at the num -1 index
+    
+    //keep splitting until arr legnth < num. Once this happens grab the rest of the 
+    //arr and put it in the returning arr
+}
+
+arr = [1,2,3,4]
+n = 3
