@@ -4,3 +4,72 @@ Creating pointers or values that correspond to an index or position and move tow
 the beginning end or middle based on a certain condition. 
 
 Very efficeint for solving problems with minimal space complexity as well 
+
+Problem : Create a function which accepts a sorted array and counts the unique values in the array
+            THere can be negative numbers in the array but it will alwasy be sorted 
+
+IMW: count the amount of unique values in a sorted array 
+
+Example: uniqueValues([-1,1,4,4,6,7,8,9,9]) ---> returns 7
+Example uniqueValues([])  ---> returns 0 
+
+input = [-1,-1,-1,3,4,5,6,6,7,9]
+
+const unique = (arr) => {
+    const set = new Set(arr)
+
+    return set.size
+}
+
+another way
+
+function countUniqueValues(arr){
+    // create 2 pointers to compare values 
+        let pointOne = 0
+        let pointTwo = 1
+        let counter = 0
+    //take the first pointer and compare it witht he 2nd pointer 
+    while(pointOne <= arr.length - 1){
+        if(arr[pointOne] !== arr[pointTwo]){
+            counter++
+        }
+        pointOne++
+        pointTwo++
+        
+    }
+    return counter
+  
+}
+
+
+------------------------------------------------------
+Question: given an array of integers sorted find two numbers wich that they add up to a specific target number. 
+            return the indeices of the two numbers in a 1-based index. You CANNOT use the same element twice
+
+IMW: given an array of nums in order find the two nums that equal the target 
+
+example : findSum([4,5,6,10,12])  target: 14 ---> output [1,4]  4 + 10 = 14
+
+What if the arr is empty and the target has a value
+    //return null 
+
+
+
+input [2,3,6,9,10] target: 19
+
+const findSum = (arr, target)=> {
+    //handles if arr is less than 2 
+    if(arr.length < 2){
+        return null 
+    }
+    //take the target and subtract it from each num. 
+        // if that result is in arr find the index of the result in the arr and num and return it 
+    for(let num of arr){
+        let result = target - num 
+        if(arr.includes(result)){
+           return [arr.indexOf(num)+ 1, arr.indexOf(result) + 1] 
+        }
+        
+    }
+
+}
