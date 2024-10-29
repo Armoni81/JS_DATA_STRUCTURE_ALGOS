@@ -1,0 +1,100 @@
+Frequency Counter Pattern
+
+- This pattern uses objects or sets to collect 
+    values/frequencies of values
+
+
+Example: 
+
+Given two array check to see if the values of arr1 are avalible 
+in arr2.
+
+IMY: Each value in arr1  need to be in arr2 but squared
+
+arr1 = [1,2,3] arr2 = [1,4,9]
+
+const same = (arr1,arr2) => {
+
+    if(arr1.lenght !== arr2.length){
+        return false
+    }
+    //creat two objects to hold frequesncy of arr1 & arr2
+    const arr1Freq = {}
+    const arr2Freq = {}
+
+    for(let key of arr1){
+        arr1Freq[key] = (arr1Freq[key] || 0) + 1
+    }
+    for(let key of arr2){
+        arr2Freq[key] = (arr2Freq[key] || 0) + 1
+    }
+
+    for(let key of  arrFreq1){
+        if(!(key ** 2 in arr2Freq)){ // checks to see if the key^2 is a key in arr2Freq
+            return false
+        }
+        if(arr2Freq[key  ** 2] !=== arr1Freq[key]){ checks to see if duplicates are counted
+            return false
+        }
+    }
+    return true
+}
+
+Test Run 
+
+Problem: Given two string, write a function to determine if the second string in an anagram
+         of the first. An anagram is a word , phrase or nameformed by rearranging 
+         the letters of another , such as cineman formed from iceman
+
+IMY : write a fucniotn to see if the same letters in str1 are present is str2. Including frequencies
+
+simple example: isAnaGram('twix','wixt') ----> true
+simple example: isAnaGram('armonii','armoni') ---> false 
+
+
+{
+    t:1,
+    w:1,
+    i:1,
+    x:1
+}
+
+{
+    w:1,
+    i:1,
+    x:1,
+    t:1
+}
+
+const isAnaGram = (str1,str2) => {
+    //need to check the length of both strings. If they arent equal return false
+    if(str1.length !== str2.length){
+        return false
+    }
+    // create two objects to capture the frequencies of each letter in provided strings 
+    const str1Freq = {}
+    const str2Freq = {}
+        //put the characters in an object witht he key being the letter
+        // and the value being its frequency
+    for(let char of str1){
+        str1Freq[char] = (str1Freq[char] || 0) + 1 
+    }
+     for(let char of str2){
+        str2Freq[char] = (str2Freq[char] || 0) + 1 
+    }
+    //use str1Freq to check if a key in here is inside of str2Freq  --> if not return false
+    for(let key in str1Freq){
+        if(!(key in str2Freq)){
+            console.log(key, 'here ')
+            return false
+        }
+        if(!(str1Freq[key] === str2Freq[key])){
+            return false
+        }
+    }
+    return true
+    // also need to check if they have equal value ---> if not return false 
+
+}
+
+console.log(isAnaGram('awesome', 'awesom'))
