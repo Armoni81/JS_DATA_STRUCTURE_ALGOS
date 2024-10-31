@@ -73,3 +73,50 @@ const findSum = (arr, target)=> {
     }
 
 }
+
+Ceasar Cipher 
+
+Problem : Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter by a number
+ of letters. If the shift takes you past the end of the alphabet, 
+just rotate back to the front of the alphabet. In the case of a rotation by 3, w, x, y and z would map to z, a, b and c.
+
+IMW: rotate the alphabet by given num. if given num is 4 abc would represent def 
+
+easy: cipher('efg', 4) ---> hij
+
+input = 'Armoni is cool' 
+num = 6
+
+
+const input = 'Armoni is cool' 
+const num =1
+
+const cipher = (str, num) => {
+   
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const toArray = [...alphabet]
+    const flipAlphabet = num + 26 - num
+    const toLowerCase = str.toLowerCase()
+    const obj = {}
+    const cipherArray = []
+        for(let char of alphabet){
+            obj[char] = alphabet[num]
+            num++
+            if(num === flipAlphabet){
+                console.log(num, 'if')
+                num = 0
+            }
+        }
+      for(let char of toLowerCase){
+            cipherArray.push(obj[char])
+      }
+           return cipherArray.join(" ")
+}
+console.log(cipher(input, num))
+const str = `{Ar-m-oni's}`
+const val = 1
+const yeed = (cipher, str, val) => {
+    return cipher(str,val)
+}
+
+console.log(yeed(cipher, str, val), 'OYYOY')
