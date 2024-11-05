@@ -1,0 +1,42 @@
+Sliding Window 
+
+Very useful when keeping track of a subset of data in an array/string
+
+If a probelm involves continuous subarrays, fixed-length subarrays or checking for conditions
+over a dynamic range within an array or string the sliding window techniwq is often a good fit. 
+its effcient for scenarios where recalulating values would be too slow. 
+
+For example, if we’re using a 3-minute sliding window to count people:
+
+We start with a count of the first 3 minutes.
+When we move the window one minute forward, we subtract the count from the first minute 
+and add the count from the fourth minute.
+So, in summary, the sliding window doesn’t involve more people leaving than entering — 
+it’s a balanced add-and-remove approach to maintain a steady focus on a fixed range of data.
+
+
+example: FInd the maximum sum of any subarray of length K in a given array of integers 
+IMW: find the max num of consecutive integers in a sub array keep k in mind 
+
+simple ---> findMax([1,2,8,4,5,7,9], 2)  Answer: 16 ---> 7 + 9 is the max subarray 
+
+cases ---> 
+if arr is less than 2
+if k is a negative num  
+
+const findMax = (arr, k) => {
+    //if arr.length is less than k return null
+    if(arr.length < k ) return null 
+    let maxSum = 0
+    
+    //find the sum of the first k elements in arr 
+   for(let i = 0; i <= k; i++){
+        maxSum += arr[i]
+   }
+
+    //use slidin door method  
+        // take sum of first three subtract the first elemetn and add the second elemtn 
+                // if that num is greater than the previous num update the new high
+    
+    //return the high 
+}
