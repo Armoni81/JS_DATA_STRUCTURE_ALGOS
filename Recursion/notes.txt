@@ -1,0 +1,48 @@
+A man is given a task by a wizard 
+His task is to take a list of numbers to a dragon to see if there are any odd numbers in the list
+
+The man takes the list to the dragon and the dragon say that he will only look at the first number in the list. 
+
+The man decides to take the list to the dragon once every 10 minutes
+
+On the first visit, the Dragon looks at the list (2,200,98,76)
+the Dragon only looks at the first item of the list , in this case its 2. 
+    The Dragon says 2 is not odd 
+
+On the second visit the Dragon looks at the list (200,98,76)
+    The Dragon says 200 is not odd 
+On the third visit the Dragon looks at the list (98,76)
+    The Dragon says 98 is not odd 
+On the forth visit the Dragon looks at the list (76)
+    The Dragon says 76 is not odd
+On the 5th visit the Dragon looks at the list()
+    The Dragon looks at the man can call him an idiot for bringing him and empty list 
+
+In the end the man returned the list to the Wizard. The man told the wizrds that the list contained no odd numbers.
+
+This is recursion 
+The end...
+
+----------------------------------------------------------------------------------------------------------------------------
+What is Recursion? 
+- A function the calls itself
+
+Where does recusrion happen? 
+- JSON.parse/ JSON.stringify
+- document.getElementById 
+- Object traversal
+
+A call stack 
+    A stack is a data structure! 
+
+    Anytime a function is invoked it is placed(pushed) on the top of the call stack 
+
+    When javascript see the return keyworkd or when the function ends, the complier will remove(pop)
+    the function from the call stack 
+
+
+Base Case 
+    Where the recursion stops/ends.
+
+
+Helper method recursion 

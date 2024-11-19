@@ -40,3 +40,13 @@ const findMax = (arr, k) => {
     
     //return the high 
 }
+
+
+
+[1,2,3,4] k = 2 
+
+{
+    arr[k] --> arr[2]
+    
+
+}

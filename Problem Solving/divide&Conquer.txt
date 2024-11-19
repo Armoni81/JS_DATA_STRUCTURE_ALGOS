@@ -1,0 +1,8 @@
+Divide And Conquer 
+
+THis pattern involves dividing a data set into smaller chunks and then repeating a process 
+with a subset of data 
+
+Problem: Given a sorted Array of intergers, write a function called search , that accepts a
+        a value and returns the index where the value passed to the function is located. 
+        if the value is not found return -1 
